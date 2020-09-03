@@ -1,0 +1,28 @@
+---
+layout: layout-wrapper
+food: "home"
+---
+<div class="w-screen h-screen flex items-center relative">
+  <div class="w-full flex-grow flex z-10">
+    <div class="w-2/12 h-full bg-transparent"></div>
+    <div class="w-10/12 h-full px-8 py-4 bg-white">
+      <h1 class="w-10/12 font-black relative overflow-hidden py-2">
+        <span class="hi flex opacity-0 leading-none" style="font-size: 4vw;">Hi, I'm&nbsp;</span>
+        <span class="text leading-none bg-clip-text text-transparent" style="font-size: 6vw; background-image: linear-gradient(to bottom, #f15b74, #ff6021);"></span>
+        <span class="cursor opacity-0 leading-none bg-clip-text text-transparent" style="font-size: 6vw; background-image: linear-gradient(to bottom, #f15b74, #ff6021);">_</span>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="w-screen h-screen flex justify-center items-center relative">
+  {% for post in site.projects %}
+  <a class="transition-left trans" href="{{ post.url }}">
+    <h2>{{ post.title }}</h2>
+  </a>
+  {% endfor %}
+</div>
+
+<!-- <script src="{{"/assets/js/home.js" | relative_url}}">
+
+</script> -->
