@@ -2,27 +2,33 @@
 layout: layout-wrapper
 ---
 
-<div class="w-screen h-screen relative">
-  <div class="w-full py-8 flex justify-center sticky top-0 z-20">
-    <div class="container flex justify-between">
-      <div class="w-2/12">
-        <a href="/">
-          <div class="w-full h-16 bg-gray-200 rounded-md"></div>
-        </a>
-      </div>
-      <div class="w-8/12 flex justify-end items-center">
-        <div class="flex">
-          <div class="w-32 h-8 bg-gray-200 rounded-md mx-4"></div>
-          <div class="w-32 h-8 bg-gray-200 rounded-md mx-4"></div>
-          <div class="w-32 h-8 bg-gray-200 rounded-md mx-4"></div>
-        </div>
+<div class="site-header w-screen py-8 fixed flex justify-center top-0 z-20 bg-transparent trans">
+  <div class="container flex justify-between">
+    <div class="w-2/12">
+      <a href="/">
+        <div class="header__logo w-full h-16 bg-gray-200 rounded-md trans trans-fast"></div>
+      </a>
+    </div>
+    <div class="w-8/12 flex justify-end items-center">
+      <div class="flex">
+        <div class="w-32 h-8 bg-gray-200 rounded-md mx-4"></div>
+        <div class="w-32 h-8 bg-gray-200 rounded-md mx-4"></div>
+        <div class="w-32 h-8 bg-gray-200 rounded-md mx-4"></div>
       </div>
     </div>
   </div>
-  <div class="absolute inset-0 w-full h-full bg-gray-900">
-    <div class="absolute right-0 w-7/12 h-full bg-center bg-cover" style="background-image: url({{ page.hero_bg | relative_url }});">
-      <div class="w-full h-full bg-gray-800 opacity-50">
+</div>
 
+<div class="w-screen h-screen relative">
+  <div class="absolute inset-0 w-full h-full bg-gray-900 flex justify-center items-center">
+    <div class="container z-10">
+      <div class="w-1/2 flex flex-col pl-10">
+        <h2 class="text-white font-bold text-6xl">{{ page.title }}</h2>
+      </div>
+    </div>
+    <div class="absolute right-0 w-7/12 h-full bg-center bg-cover"
+      style="background-image: url({{ page.hero_bg | relative_url }});">
+      <div class="w-full h-full bg-gray-800 opacity-50">
       </div>
     </div>
   </div>
@@ -30,7 +36,8 @@ layout: layout-wrapper
 
 <div class="w-screen h-screen relative">
   <div class="absolute inset-0 w-full h-full bg-gray-900">
-    <div class="absolute right-0 w-7/12 h-full bg-center bg-cover" style="background-image: url({{ page.hero_bg | relative_url }});">
+    <div class="absolute right-0 w-7/12 h-full bg-center bg-cover"
+      style="background-image: url({{ page.hero_bg | relative_url }});">
       <div class="w-full h-full bg-gray-800 opacity-50">
 
       </div>
@@ -39,7 +46,8 @@ layout: layout-wrapper
 </div>
 <div class="w-screen h-screen relative">
   <div class="absolute inset-0 w-full h-full bg-gray-900">
-    <div class="absolute right-0 w-7/12 h-full bg-center bg-cover" style="background-image: url({{ page.hero_bg | relative_url }});">
+    <div class="absolute right-0 w-7/12 h-full bg-center bg-cover"
+      style="background-image: url({{ page.hero_bg | relative_url }});">
       <div class="w-full h-full bg-gray-800 opacity-50">
 
       </div>
