@@ -23,24 +23,8 @@ $(document).ready(function () {
     }, 100);
   });
   swup.on("contentReplaced", init);
-  // End ------ Page Transition
 
-  // Start ------ Sticky Header
-  let siteDesktopHeader = $(".site-header");
-  let headerHeight = siteDesktopHeader.outerHeight();
-  $(window).scroll(function () {
-    let offset = $(document).scrollTop();
-    if (offset > 0) {
-      siteDesktopHeader
-        .removeClass("bg-transparent py-8")
-        .addClass("bg-gray-800 py-4");
-    } else {
-      siteDesktopHeader
-        .addClass("bg-transparent py-8")
-        .removeClass("bg-gray-800 py-4");
-    }
-  });
-  // End ------ Sticky Header
+  // End ------ Page Transition
 
   // Functions
   function init() {
@@ -79,6 +63,30 @@ $(document).ready(function () {
       });
       tl.to(".text", { duration: 1, text: word });
       masterTl.add(tl);
+    });
+
+    // Start ------ Sticky Header
+    headerEvent();
+    // End ------ Sticky Header
+  }
+
+  function headerEvent() {
+    let siteDesktopHeader = $(".site-header");
+    let siteLogo = siteDesktopHeader.find(".header__logo");
+    let headerHeight = siteDesktopHeader.outerHeight();
+    $(window).scroll(function () {
+      let offset = $(document).scrollTop();
+      if (offset > 0) {
+        siteDesktopHeader
+          .removeClass("bg-transparent py-8")
+          .addClass("bg-gray-800 py-4");
+        siteLogo.removeClass("h-16").addClass("h-10");
+      } else {
+        siteDesktopHeader
+          .addClass("bg-transparent py-8")
+          .removeClass("bg-gray-800 py-4");
+        siteLogo.addClass("h-16").removeClass("h-10");
+      }
     });
   }
 });
